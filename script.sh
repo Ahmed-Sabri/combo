@@ -4,7 +4,7 @@
 ## Phase-1 | Install Kali Terminal
 ######################################
 sudo apt update && sudo apt upgrade -y
-sudo apt install python3 python3-pip python3-full git curl glances gpg -y
+sudo apt install python3 python3-pip python3-full git curl glances gpg btop unzip -y
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
