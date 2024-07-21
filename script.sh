@@ -4,9 +4,8 @@
 ## Phase-1 | Install Kali Terminal
 ######################################
 sudo apt update && sudo apt full-upgrade -y
-sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go btop -y
+sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go rustc ca-certificates btop -y
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 curl -sSL https://install.python-poetry.org | python3 -
 export PATH="$HOME/.local/bin:$PATH"
@@ -46,14 +45,14 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg 
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_21.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 sudo apt update && sudo apt full-upgrade -y
 sudo apt install nodejs -y
-pip install --upgrade --no-cache npm open-interpreter pip pipx
+pip install --upgrade --no-cache npm open-interpreter pip pipx pytube aider-chat rawdog-ai crawlee 'crawlee[beautifulsoup,playwright]' pollinations openrouter-sdk openai faster-whisper mem0ai
+playwright install
 npm install pnpm
 ######################################
 ## Phase-1.3 | Install Docker
 ######################################
 # Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
+
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
