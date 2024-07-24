@@ -30,7 +30,6 @@ sudo rm -rf /usr/share/qtermwidget5
 sudo mv -f usr/share/qtermwidget5 /usr/share
 sudo mv -f usr/share/themes/Kali-Dark /usr/share/themes
 zsh
-exit
 ######################################
 ## Phase-1.2 | Install NodeJS V21
 ######################################
