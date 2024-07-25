@@ -33,17 +33,9 @@ zsh
 ######################################
 ## Phase-1.2 | Install NodeJS V21
 ######################################
-sudo apt install nodejs -y
-sudo apt purge nodejs -y
-sudo apt remove nodejs -y
-sudo apt autoremove -y
-sudo apt update && sudo apt full-upgrade -y
-sudo apt install -y ca-certificates curl gnupg
-mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_21.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt update && sudo apt full-upgrade -y
-sudo apt install nodejs -y
+curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get install nodejs -y
 pip install --upgrade --no-cache npm open-interpreter pip pipx pytube aider-chat rawdog-ai crawlee 'crawlee[beautifulsoup,playwright]' pollinations openrouter-sdk openai faster-whisper mem0ai
 playwright install
 npm install pnpm
