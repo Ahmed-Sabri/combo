@@ -4,7 +4,7 @@
 ## Phase-1 | Install Kali Terminal
 ######################################
 sudo apt update && sudo apt full-upgrade -y
-sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go rustc ca-certificates btop -y
+sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go rustc cmdtest ca-certificates btop -y
 . "$HOME/.cargo/env"
 
 curl -sSL https://install.python-poetry.org | python3 -
