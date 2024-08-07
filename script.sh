@@ -5,7 +5,7 @@
 ######################################
 sudo apt update && sudo apt full-upgrade -y
 sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go rustc ca-certificates btop -y
-
+. "$HOME/.cargo/env"
 
 curl -sSL https://install.python-poetry.org | python3 -
 export PATH="$HOME/.local/bin:$PATH"
@@ -30,6 +30,8 @@ sudo rm -rf /usr/share/qtermwidget5
 sudo mv -f usr/share/qtermwidget5 /usr/share
 sudo mv -f usr/share/themes/Kali-Dark /usr/share/themes
 zsh
+. "$HOME/.cargo/env"
+exit
 ######################################
 ## Phase-1.2 | Install NodeJS V21
 ######################################
@@ -71,4 +73,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
+. "$HOME/.cargo/env"
 exit
+. "$HOME/.cargo/env"
+
