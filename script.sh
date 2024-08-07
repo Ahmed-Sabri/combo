@@ -30,7 +30,6 @@ sudo rm -rf /usr/share/qtermwidget5
 sudo mv -f usr/share/qtermwidget5 /usr/share
 sudo mv -f usr/share/themes/Kali-Dark /usr/share/themes
 zsh
-. "$HOME/.cargo/env"
 exit
 ######################################
 ## Phase-1.2 | Install NodeJS V21
@@ -74,7 +73,4 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
-. "$HOME/.cargo/env"
 exit
-. "$HOME/.cargo/env"
-
