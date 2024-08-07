@@ -38,7 +38,8 @@ exit
 curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo -E bash nodesource_setup.sh
 sudo apt-get install nodejs -y
-pip install --upgrade --no-cache npm open-interpreter pip pipx pytube aider-chat rawdog-ai crawlee 'crawlee[beautifulsoup,playwright]' pollinations openrouter-sdk openai faster-whisper mem0ai
+pip install --upgrade --no-cache npm open-interpreter pip pipx pytube aider-chat rawdog-ai crawlee 'crawlee[beautifulsoup,playwright]' 'crawlee[curl-impersonate]' 'crawlee[playwright]' curl_cffi pollinations openrouter-sdk openai faster-whisper mem0ai
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 playwright install
 npm install pnpm
 ######################################
