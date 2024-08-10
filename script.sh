@@ -1,11 +1,10 @@
 #!/bin/bash
 #The installation will run into 2 phases, the first phase will install Kali terminal, when the installation finishes, type "exit" then you will see Phase-2 started to install Mini-Conda! 
-######################################
-## Phase-1 | Install Kali Terminal
-######################################
+##############################################################
+## Phase-1 | Install Kali Terminal ||. "$HOME/.cargo/env"
+###############################################################
 sudo apt update && sudo apt full-upgrade -y
-sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go rustc cmdtest ca-certificates btop -y
-. "$HOME/.cargo/env"
+sudo apt install python3 python3-pip python3-full git curl glances gpg golang-go rustc cmdtest ca-certificates btop ffmpeg yt-dlp python3-apport python3-problem-report -y
 
 curl -sSL https://install.python-poetry.org | python3 -
 export PATH="$HOME/.local/bin:$PATH"
@@ -30,15 +29,15 @@ sudo rm -rf /usr/share/qtermwidget5
 sudo mv -f usr/share/qtermwidget5 /usr/share
 sudo mv -f usr/share/themes/Kali-Dark /usr/share/themes
 zsh
-exit
 ######################################
 ## Phase-1.2 | Install NodeJS V21
 ######################################
 curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo -E bash nodesource_setup.sh
 sudo apt-get install nodejs -y
-pip install --upgrade --no-cache npm open-interpreter pip pipx pytube aider-chat rawdog-ai crawlee 'crawlee[beautifulsoup,playwright]' 'crawlee[curl-impersonate]' 'crawlee[playwright]' curl_cffi pollinations openrouter-sdk openai faster-whisper mem0ai
+pip install --upgrade --no-cache npm open-interpreter pip pipx pytube setuptools-rust aider-chat rawdog-ai crawlee 'crawlee[beautifulsoup,playwright]' 'crawlee[curl-impersonate]' 'crawlee[playwright]' curl_cffi pollinations openrouter-sdk openai faster-whisper mem0ai
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+install git+https://github.com/openai/whisper.git
 playwright install
 npm install pnpm
 ######################################
@@ -73,4 +72,4 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
-exit
+
